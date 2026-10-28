@@ -1,0 +1,137 @@
+<mxfile host="app.diagrams.net" scale="1" border="0">
+  <diagram name="Страница-1" id="1AocjculQc8Gt6D0Y5ED">
+    <mxGraphModel dx="1831" dy="1075" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="Se16DTF4elTWrC9DQimY-4" edge="1" parent="1" source="Se16DTF4elTWrC9DQimY-1" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;defaultLabelBackgroundColor=page;" target="Se16DTF4elTWrC9DQimY-2">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="Se16DTF4elTWrC9DQimY-1" parent="1" style="rounded=1;whiteSpace=wrap;html=1;roundedPerimeter=1;" value="Начало" vertex="1">
+          <mxGeometry height="60" width="120" x="350" y="20" as="geometry" />
+        </mxCell>
+        <mxCell id="Se16DTF4elTWrC9DQimY-6" edge="1" parent="1" source="Se16DTF4elTWrC9DQimY-2" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;defaultLabelBackgroundColor=page;" target="Se16DTF4elTWrC9DQimY-5">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="Se16DTF4elTWrC9DQimY-2" parent="1" style="shape=parallelogram;perimeter=parallelogramPerimeter;whiteSpace=wrap;html=1;shapeInside=1;fixedSize=1;" value="Ввод: orders, stock" vertex="1">
+          <mxGeometry height="60" width="120" x="350" y="100" as="geometry" />
+        </mxCell>
+        <mxCell id="Se16DTF4elTWrC9DQimY-8" edge="1" parent="1" source="Se16DTF4elTWrC9DQimY-5" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;defaultLabelBackgroundColor=page;" target="Se16DTF4elTWrC9DQimY-7">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="Se16DTF4elTWrC9DQimY-5" parent="1" style="rounded=0;whiteSpace=wrap;html=1;" value="deficit_list = []&lt;div&gt;total_cost = 0&lt;/div&gt;&lt;div&gt;i = 0&lt;/div&gt;" vertex="1">
+          <mxGeometry height="60" width="120" x="350" y="190" as="geometry" />
+        </mxCell>
+        <mxCell id="Se16DTF4elTWrC9DQimY-10" edge="1" parent="1" source="Se16DTF4elTWrC9DQimY-7" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;defaultLabelBackgroundColor=page;" target="Se16DTF4elTWrC9DQimY-9">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="Se16DTF4elTWrC9DQimY-13" connectable="0" parent="Se16DTF4elTWrC9DQimY-10" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];inheritText=1;defaultLabelBackgroundColor=page;" value="Нет" vertex="1">
+          <mxGeometry relative="1" x="-0.6974" y="4" as="geometry">
+            <mxPoint x="-20" y="-6" as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="Se16DTF4elTWrC9DQimY-15" edge="1" parent="1" source="Se16DTF4elTWrC9DQimY-7" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;defaultLabelBackgroundColor=page;" target="Se16DTF4elTWrC9DQimY-14">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="Se16DTF4elTWrC9DQimY-33" connectable="0" parent="Se16DTF4elTWrC9DQimY-15" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];inheritText=1;defaultLabelBackgroundColor=page;" value="Да" vertex="1">
+          <mxGeometry relative="1" x="-0.7133" y="-1" as="geometry">
+            <mxPoint x="11" as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="Se16DTF4elTWrC9DQimY-7" parent="1" style="rhombus;whiteSpace=wrap;html=1;shapeInside=1;" value="i &amp;lt; len(orders)" vertex="1">
+          <mxGeometry height="100" width="120" x="350" y="280" as="geometry" />
+        </mxCell>
+        <mxCell id="Se16DTF4elTWrC9DQimY-12" edge="1" parent="1" source="Se16DTF4elTWrC9DQimY-9" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;defaultLabelBackgroundColor=page;" target="Se16DTF4elTWrC9DQimY-11">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="Se16DTF4elTWrC9DQimY-9" parent="1" style="shape=parallelogram;perimeter=parallelogramPerimeter;whiteSpace=wrap;html=1;shapeInside=1;fixedSize=1;" value="deficit_list, total_cost" vertex="1">
+          <mxGeometry height="60" width="120" x="540" y="370" as="geometry" />
+        </mxCell>
+        <mxCell id="Se16DTF4elTWrC9DQimY-11" parent="1" style="rounded=1;whiteSpace=wrap;html=1;roundedPerimeter=1;" value="Конец" vertex="1">
+          <mxGeometry height="60" width="120" x="540" y="495" as="geometry" />
+        </mxCell>
+        <mxCell id="Se16DTF4elTWrC9DQimY-17" edge="1" parent="1" source="Se16DTF4elTWrC9DQimY-14" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;defaultLabelBackgroundColor=page;" target="Se16DTF4elTWrC9DQimY-16">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="Se16DTF4elTWrC9DQimY-14" parent="1" style="rounded=0;whiteSpace=wrap;html=1;" value="order = orders[i]&lt;div&gt;j = 0&lt;/div&gt;" vertex="1">
+          <mxGeometry height="60" width="120" x="350" y="410" as="geometry" />
+        </mxCell>
+        <mxCell id="Se16DTF4elTWrC9DQimY-19" edge="1" parent="1" source="Se16DTF4elTWrC9DQimY-16" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0;exitY=0.5;exitDx=0;exitDy=0;entryX=0.5;entryY=1;entryDx=0;entryDy=0;defaultLabelBackgroundColor=page;" target="Se16DTF4elTWrC9DQimY-18">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="Se16DTF4elTWrC9DQimY-35" connectable="0" parent="Se16DTF4elTWrC9DQimY-19" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];inheritText=1;defaultLabelBackgroundColor=page;" value="Нет" vertex="1">
+          <mxGeometry relative="1" x="-0.7099" y="-1" as="geometry">
+            <mxPoint x="31" y="-14" as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="Se16DTF4elTWrC9DQimY-22" edge="1" parent="1" source="Se16DTF4elTWrC9DQimY-16" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;defaultLabelBackgroundColor=page;" target="Se16DTF4elTWrC9DQimY-21">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="Se16DTF4elTWrC9DQimY-34" connectable="0" parent="Se16DTF4elTWrC9DQimY-22" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];inheritText=1;defaultLabelBackgroundColor=page;" value="Да" vertex="1">
+          <mxGeometry relative="1" x="-0.7394" y="-1" as="geometry">
+            <mxPoint x="21" as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="Se16DTF4elTWrC9DQimY-16" parent="1" style="rhombus;whiteSpace=wrap;html=1;shapeInside=1;" value="j &amp;lt; len(order[&#39;components&#39;])" vertex="1">
+          <mxGeometry height="140" width="160" x="330" y="515" as="geometry" />
+        </mxCell>
+        <mxCell id="Se16DTF4elTWrC9DQimY-20" edge="1" parent="1" source="Se16DTF4elTWrC9DQimY-18" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=0;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;defaultLabelBackgroundColor=page;" target="Se16DTF4elTWrC9DQimY-7">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="Se16DTF4elTWrC9DQimY-18" parent="1" style="rounded=0;whiteSpace=wrap;html=1;" value="i = i+1" vertex="1">
+          <mxGeometry height="60" width="120" x="140" y="370" as="geometry" />
+        </mxCell>
+        <mxCell id="Se16DTF4elTWrC9DQimY-24" edge="1" parent="1" source="Se16DTF4elTWrC9DQimY-21" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;defaultLabelBackgroundColor=page;" target="Se16DTF4elTWrC9DQimY-23">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="Se16DTF4elTWrC9DQimY-21" parent="1" style="rounded=0;whiteSpace=wrap;html=1;" value="item = order[&#39;components&#39;][j]" vertex="1">
+          <mxGeometry height="60" width="120" x="350" y="680" as="geometry" />
+        </mxCell>
+        <mxCell id="Se16DTF4elTWrC9DQimY-26" edge="1" parent="1" source="Se16DTF4elTWrC9DQimY-23" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0;exitY=0.5;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;defaultLabelBackgroundColor=page;" target="Se16DTF4elTWrC9DQimY-25">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="Se16DTF4elTWrC9DQimY-37" connectable="0" parent="Se16DTF4elTWrC9DQimY-26" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];inheritText=1;defaultLabelBackgroundColor=page;" value="Да" vertex="1">
+          <mxGeometry relative="1" x="-0.745" y="1" as="geometry">
+            <mxPoint x="6" y="-11" as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="Se16DTF4elTWrC9DQimY-31" edge="1" parent="1" source="Se16DTF4elTWrC9DQimY-23" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;defaultLabelBackgroundColor=page;" target="Se16DTF4elTWrC9DQimY-30">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="Se16DTF4elTWrC9DQimY-36" connectable="0" parent="Se16DTF4elTWrC9DQimY-31" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];inheritText=1;defaultLabelBackgroundColor=page;" value="Нет" vertex="1">
+          <mxGeometry relative="1" x="-0.8452" y="-1" as="geometry">
+            <mxPoint y="-11" as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="Se16DTF4elTWrC9DQimY-23" parent="1" style="rhombus;whiteSpace=wrap;html=1;shapeInside=1;" value="stock[item[&#39;id&#39;]] &amp;lt; item[&#39;qty&#39;]" vertex="1">
+          <mxGeometry height="140" width="160" x="330" y="760" as="geometry" />
+        </mxCell>
+        <mxCell id="Se16DTF4elTWrC9DQimY-28" edge="1" parent="1" source="Se16DTF4elTWrC9DQimY-25" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;defaultLabelBackgroundColor=page;" target="Se16DTF4elTWrC9DQimY-27">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="Se16DTF4elTWrC9DQimY-25" parent="1" style="rounded=0;whiteSpace=wrap;html=1;" value="Добавить&amp;nbsp;{order_id, item_id, need} в deficit_list" vertex="1">
+          <mxGeometry height="60" width="120" x="110" y="870" as="geometry" />
+        </mxCell>
+        <mxCell id="Se16DTF4elTWrC9DQimY-29" edge="1" parent="1" source="Se16DTF4elTWrC9DQimY-27" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;defaultLabelBackgroundColor=page;" target="Se16DTF4elTWrC9DQimY-16">
+          <mxGeometry relative="1" x="-0.12" as="geometry">
+            <Array as="points">
+              <mxPoint x="170" y="1050" />
+              <mxPoint x="90" y="1050" />
+              <mxPoint x="90" y="480" />
+              <mxPoint x="410" y="480" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="Se16DTF4elTWrC9DQimY-27" parent="1" style="rounded=0;whiteSpace=wrap;html=1;" value="j = j+1" vertex="1">
+          <mxGeometry height="60" width="120" x="110" y="970" as="geometry" />
+        </mxCell>
+        <mxCell id="Se16DTF4elTWrC9DQimY-32" edge="1" parent="1" source="Se16DTF4elTWrC9DQimY-30" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;defaultLabelBackgroundColor=page;" target="Se16DTF4elTWrC9DQimY-27">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="Se16DTF4elTWrC9DQimY-30" parent="1" style="rounded=0;whiteSpace=wrap;html=1;" value="stock[item[&#39;id&#39;]] -= item[&#39;qty&#39;]&lt;div&gt;total_cost += item[&#39;qty&#39;] * item[&#39;price&#39;]&lt;/div&gt;" vertex="1">
+          <mxGeometry height="80" width="170" x="540" y="850" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>
