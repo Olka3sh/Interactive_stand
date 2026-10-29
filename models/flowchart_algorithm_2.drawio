@@ -1,0 +1,111 @@
+<mxfile host="app.diagrams.net" scale="1" border="0">
+  <diagram name="Страница-1" id="-PholGEeDd4rGwNlVQKw">
+    <mxGraphModel dx="1394" dy="818" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="slv-IPJhkfGP_TCdEb_Z-4" edge="1" parent="1" source="slv-IPJhkfGP_TCdEb_Z-1" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;defaultLabelBackgroundColor=page;" target="slv-IPJhkfGP_TCdEb_Z-2">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="slv-IPJhkfGP_TCdEb_Z-1" parent="1" style="rounded=1;whiteSpace=wrap;html=1;roundedPerimeter=1;" value="Начало" vertex="1">
+          <mxGeometry height="60" width="120" x="204" y="20" as="geometry" />
+        </mxCell>
+        <mxCell id="slv-IPJhkfGP_TCdEb_Z-5" edge="1" parent="1" source="slv-IPJhkfGP_TCdEb_Z-2" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;defaultLabelBackgroundColor=page;" target="slv-IPJhkfGP_TCdEb_Z-3">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="slv-IPJhkfGP_TCdEb_Z-2" parent="1" style="shape=parallelogram;perimeter=parallelogramPerimeter;whiteSpace=wrap;html=1;shapeInside=1;fixedSize=1;" value="Ввод: defects,&lt;div&gt;total_inspections&lt;/div&gt;" vertex="1">
+          <mxGeometry height="60" width="120" x="204" y="110" as="geometry" />
+        </mxCell>
+        <mxCell id="slv-IPJhkfGP_TCdEb_Z-7" edge="1" parent="1" source="slv-IPJhkfGP_TCdEb_Z-3" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;defaultLabelBackgroundColor=page;" target="slv-IPJhkfGP_TCdEb_Z-6">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="slv-IPJhkfGP_TCdEb_Z-3" parent="1" style="rounded=0;whiteSpace=wrap;html=1;" value="hw_count = 0&lt;div&gt;sw_count = 0&lt;/div&gt;&lt;div&gt;k = 0&lt;/div&gt;" vertex="1">
+          <mxGeometry height="60" width="120" x="204" y="200" as="geometry" />
+        </mxCell>
+        <mxCell id="slv-IPJhkfGP_TCdEb_Z-9" edge="1" parent="1" source="slv-IPJhkfGP_TCdEb_Z-6" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;defaultLabelBackgroundColor=page;" target="slv-IPJhkfGP_TCdEb_Z-8">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="slv-IPJhkfGP_TCdEb_Z-12" connectable="0" parent="slv-IPJhkfGP_TCdEb_Z-9" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];inheritText=1;defaultLabelBackgroundColor=page;" value="Да" vertex="1">
+          <mxGeometry relative="1" x="-0.7667" y="1" as="geometry">
+            <mxPoint x="-15" y="1" as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="slv-IPJhkfGP_TCdEb_Z-24" edge="1" parent="1" source="slv-IPJhkfGP_TCdEb_Z-6" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;defaultLabelBackgroundColor=page;" target="slv-IPJhkfGP_TCdEb_Z-23">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="slv-IPJhkfGP_TCdEb_Z-25" connectable="0" parent="slv-IPJhkfGP_TCdEb_Z-24" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];inheritText=1;defaultLabelBackgroundColor=page;" value="Нет" vertex="1">
+          <mxGeometry relative="1" x="-0.863" y="5" as="geometry">
+            <mxPoint y="-5" as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="slv-IPJhkfGP_TCdEb_Z-6" parent="1" style="rhombus;whiteSpace=wrap;html=1;shapeInside=1;" value="k &amp;lt; len(defects)" vertex="1">
+          <mxGeometry height="100" width="146" x="191" y="290" as="geometry" />
+        </mxCell>
+        <mxCell id="slv-IPJhkfGP_TCdEb_Z-11" edge="1" parent="1" source="slv-IPJhkfGP_TCdEb_Z-8" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;defaultLabelBackgroundColor=page;" target="slv-IPJhkfGP_TCdEb_Z-10">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="slv-IPJhkfGP_TCdEb_Z-8" parent="1" style="rounded=0;whiteSpace=wrap;html=1;" value="defect = defects[k]" vertex="1">
+          <mxGeometry height="60" width="120" x="204" y="420" as="geometry" />
+        </mxCell>
+        <mxCell id="slv-IPJhkfGP_TCdEb_Z-14" edge="1" parent="1" source="slv-IPJhkfGP_TCdEb_Z-10" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0;exitY=0.5;exitDx=0;exitDy=0;defaultLabelBackgroundColor=page;" target="slv-IPJhkfGP_TCdEb_Z-13">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="slv-IPJhkfGP_TCdEb_Z-16" connectable="0" parent="slv-IPJhkfGP_TCdEb_Z-14" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];inheritText=1;defaultLabelBackgroundColor=page;" value="Да" vertex="1">
+          <mxGeometry relative="1" x="-0.5745" y="2" as="geometry">
+            <mxPoint x="9" y="-12" as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="slv-IPJhkfGP_TCdEb_Z-17" edge="1" parent="1" source="slv-IPJhkfGP_TCdEb_Z-10" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;defaultLabelBackgroundColor=page;" target="slv-IPJhkfGP_TCdEb_Z-15">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="slv-IPJhkfGP_TCdEb_Z-18" connectable="0" parent="slv-IPJhkfGP_TCdEb_Z-17" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];inheritText=1;defaultLabelBackgroundColor=page;" value="Нет" vertex="1">
+          <mxGeometry relative="1" x="-0.3865" y="-1" as="geometry">
+            <mxPoint x="-37" y="-11" as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="slv-IPJhkfGP_TCdEb_Z-10" parent="1" style="rhombus;whiteSpace=wrap;html=1;shapeInside=1;" value="defect[&#39;type&#39;] == &#39;hardware&#39;" vertex="1">
+          <mxGeometry height="100" width="146" x="191" y="500" as="geometry" />
+        </mxCell>
+        <mxCell id="slv-IPJhkfGP_TCdEb_Z-21" edge="1" parent="1" source="slv-IPJhkfGP_TCdEb_Z-13" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;defaultLabelBackgroundColor=page;" target="slv-IPJhkfGP_TCdEb_Z-19">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="slv-IPJhkfGP_TCdEb_Z-13" parent="1" style="rounded=0;whiteSpace=wrap;html=1;" value="hw_count = hw_count + 1" vertex="1">
+          <mxGeometry height="60" width="120" x="60" y="620" as="geometry" />
+        </mxCell>
+        <mxCell id="slv-IPJhkfGP_TCdEb_Z-20" edge="1" parent="1" source="slv-IPJhkfGP_TCdEb_Z-15" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=1;entryY=0.5;entryDx=0;entryDy=0;defaultLabelBackgroundColor=page;" target="slv-IPJhkfGP_TCdEb_Z-19">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="slv-IPJhkfGP_TCdEb_Z-15" parent="1" style="rounded=0;whiteSpace=wrap;html=1;" value="sw_count = sw_count + 1" vertex="1">
+          <mxGeometry height="60" width="120" x="370" y="620" as="geometry" />
+        </mxCell>
+        <mxCell id="slv-IPJhkfGP_TCdEb_Z-19" parent="1" style="rounded=0;whiteSpace=wrap;html=1;" value="k = k + 1" vertex="1">
+          <mxGeometry height="60" width="120" x="204" y="710" as="geometry" />
+        </mxCell>
+        <mxCell id="slv-IPJhkfGP_TCdEb_Z-22" edge="1" parent="1" source="slv-IPJhkfGP_TCdEb_Z-19" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;defaultLabelBackgroundColor=page;" target="slv-IPJhkfGP_TCdEb_Z-6">
+          <mxGeometry relative="1" x="-0.0031" as="geometry">
+            <Array as="points">
+              <mxPoint x="264" y="790" />
+              <mxPoint x="30" y="790" />
+              <mxPoint x="30" y="340" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="slv-IPJhkfGP_TCdEb_Z-27" edge="1" parent="1" source="slv-IPJhkfGP_TCdEb_Z-23" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;defaultLabelBackgroundColor=page;" target="slv-IPJhkfGP_TCdEb_Z-26">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="slv-IPJhkfGP_TCdEb_Z-23" parent="1" style="rounded=0;whiteSpace=wrap;html=1;" value="defect_rate = (len(defects) / total_inspections) * 100&lt;div&gt;hw_ratio = hw_count / len(defects)&lt;/div&gt;&lt;div&gt;sw_ratio = sw_count / len(defects)&lt;/div&gt;" vertex="1">
+          <mxGeometry height="80" width="220" x="490" y="360" as="geometry" />
+        </mxCell>
+        <mxCell id="slv-IPJhkfGP_TCdEb_Z-29" edge="1" parent="1" source="slv-IPJhkfGP_TCdEb_Z-26" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;defaultLabelBackgroundColor=page;" target="slv-IPJhkfGP_TCdEb_Z-28">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="slv-IPJhkfGP_TCdEb_Z-26" parent="1" style="shape=parallelogram;perimeter=parallelogramPerimeter;whiteSpace=wrap;html=1;shapeInside=1;fixedSize=1;" value="defect_rate, hw_ratio, sw_ratio" vertex="1">
+          <mxGeometry height="60" width="120" x="540" y="480" as="geometry" />
+        </mxCell>
+        <mxCell id="slv-IPJhkfGP_TCdEb_Z-28" parent="1" style="rounded=1;whiteSpace=wrap;html=1;roundedPerimeter=1;" value="Конец" vertex="1">
+          <mxGeometry height="60" width="120" x="540" y="580" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>
