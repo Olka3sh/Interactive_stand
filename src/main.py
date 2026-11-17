@@ -1,35 +1,34 @@
-def check_materials_deficit(orders, stock):
+from datetime import date, timedelta
+
+def check_materials_deficit(orders, order_components, components):
     deficit_list = []
     total_cost = 0.0
-    current_stock = stock.copy()
+    stock_map = {
+        comp_id: comp_data["stock_quantity"]
+        for comp_id, comp_data in components.items()
+    }
     i = 0
     while i < len(orders):
         order = orders[i]
-        order_id = order.get("id_order")
-        components = order.get("components", [])
+        items = [oc for oc in order_components if oc["id_order"] == order["id_order"]]
         j = 0
-        while j < len(components):
-            item = components[j]
-            comp_id = item.get("id_component")
-            required_qty = item.get("quantity", 0)
-            price = item.get("price_per_unit", 0.0)
-            available_qty = current_stock.get(comp_id, 0)
-            if available_qty < required_qty:
+        while j < len(items):
+            item = items[j]
+            comp = components[item["id_component"]]
+            if stock_map[item["id_component"]] < item["quantity"]:
                 deficit_item = {
-                    "id_order": order_id,
-                    "id_component": comp_id,
-                    "component_name": item.get("name", "Неизвестно"),
-                    "required": required_qty,
-                    "available": available_qty,
-                    "deficit": required_qty - available_qty,
+                    "id_order": order["id_order"],
+                    "id_component": item["id_component"],
+                    "deficit": item["quantity"] - stock_map[item["id_component"]],
                 }
                 deficit_list.append(deficit_item)
             else:
-                current_stock[comp_id] = available_qty - required_qty
-                total_cost += required_qty * price
+                stock_map[item["id_component"]] -= item["quantity"]
+                item["cost"] = item["quantity"] * comp["price_per_unit"]
+                total_cost += item["cost"]
             j += 1
         i += 1
-    return deficit_list, round(total_cost, 2), current_stock
+    return deficit_list, round(total_cost, 2)
 
 def analyze_defect_statistics(defects, total_inspections):
     if total_inspections <= 0:
@@ -67,50 +66,70 @@ def analyze_defect_statistics(defects, total_inspections):
         "total_defects": total_defects,
     }
 
+# функция register_production_order() - только программная реализация
+def register_production_order(orders, customers, id_customer, description, created_date=None, planned_days=14):
+    if id_customer not in customers:
+        raise ValueError(f"Заказчик с id_customer={id_customer} не найден")
+    next_id = max((order["id_order"] for order in orders), default=0) + 1
+    start_date = date.fromisoformat(created_date) if created_date else date.today()
+    finish_date = start_date + timedelta(days=planned_days)
+    new_order = {
+        "id_order": next_id,
+        "created_date": start_date.isoformat(),
+        "finish_date": finish_date.isoformat(),
+        "status": "Зарегистрирован",
+        "total_cost": 0.0,
+        "description": description,
+        "id_customer": id_customer,
+    }
+    orders.append(new_order)
+    return new_order
 
 def get_mock_data():
-    stock_data = {
-        101: 5,   # Сенсорная панель 55"
-        102: 8,   # Вычислительный модуль Core i5
-        103: 15,  # Блок питания 500W
-        104: 30,  # Профиль алюминиевый (м)
-        105: 3,   # Контроллер подсветки
+    customers = {
+        1: {"id_customer": 1, "name": "ООО ЭкспоДизайн", "inn": "7701234567", "contact_person": "Иванов И.И.", "phone": "+7 (495) 111-22-33", "email": "ivanov@expodesign.ru"},
+        2: {"id_customer": 2, "name": "ПАО ТехноФорум", "inn": "7709876543", "contact_person": "Петрова А.С.", "phone": "+7 (495) 444-55-66", "email": "petrova@technoforum.ru"},
     }
-    orders_data = [
-        {
-            "id_order": 1,
-            "order_number": "ORD-2026-001",
-            "customer_name": "ООО ЭкспоДизайн",
-            "components": [
-                {"id_component": 101, "name": "Сенсорная панель 55\"", "quantity": 2, "price_per_unit": 45000.0},
-                {"id_component": 102, "name": "Вычислительный модуль Core i5", "quantity": 2, "price_per_unit": 38000.0},
-                {"id_component": 104, "name": "Профиль алюминиевый (м)", "quantity": 10, "price_per_unit": 1200.0},
-            ],
-        },
-        {
-            "id_order": 2,
-            "order_number": "ORD-2026-002",
-            "customer_name": "ПАО ТехноФорум",
-            "components": [
-                {"id_component": 101, "name": "Сенсорная панель 55\"", "quantity": 4, "price_per_unit": 45000.0},
-                {"id_component": 103, "name": "Блок питания 500W", "quantity": 4, "price_per_unit": 4500.0},
-                {"id_component": 105, "name": "Контроллер подсветки", "quantity": 2, "price_per_unit": 3100.0},
-            ],
-        },
+    components = {
+        101: {"id_component": 101, "name": "Сенсорная панель 55\"", "type": "Электроника", "unit": "шт.", "price_per_unit": 45000.0, "stock_quantity": 5},
+        102: {"id_component": 102, "name": "Вычислительный модуль Core i5", "type": "Электроника", "unit": "шт.", "price_per_unit": 38000.0, "stock_quantity": 8},
+        103: {"id_component": 103, "name": "Блок питания 500W", "type": "Электроника", "unit": "шт.", "price_per_unit": 4500.0, "stock_quantity": 15},
+        104: {"id_component": 104, "name": "Профиль алюминиевый", "type": "Конструктив", "unit": "м", "price_per_unit": 1200.0, "stock_quantity": 30},
+        105: {"id_component": 105, "name": "Контроллер подсветки", "type": "Электроника", "unit": "шт.", "price_per_unit": 3100.0, "stock_quantity": 3},
+    }
+    orders = [
+        {"id_order": 1, "created_date": "2026-10-10", "finish_date": "2026-10-25", "status": "В производстве", "total_cost": 0.0, "description": "Информационный сенсорный киоск", "id_customer": 1},
     ]
-    defects_data = [
-        {"id_defect": 1, "type": "hardware", "severity": "Критический", "description": "Люфт крепления экрана"},
-        {"id_defect": 2, "type": "software", "severity": "Значительный", "description": "Зависание цикла автозапуска"},
-        {"id_defect": 3, "type": "hardware", "severity": "Незначительный", "description": "Повреждение изоляции шлейфа"},
-        {"id_defect": 4, "type": "software", "severity": "Незначительный", "description": "Ошибка отрисовки шрифта в меню"},
+    order_components = [
+        {"id_order": 1, "id_component": 101, "quantity": 2, "cost": 0.0},
+        {"id_order": 1, "id_component": 102, "quantity": 2, "cost": 0.0},
+        {"id_order": 1, "id_component": 104, "quantity": 10, "cost": 0.0},
+        {"id_order": 2, "id_component": 101, "quantity": 4, "cost": 0.0},
+        {"id_order": 2, "id_component": 103, "quantity": 4, "cost": 0.0},
+        {"id_order": 2, "id_component": 105, "quantity": 2, "cost": 0.0},
+    ]
+    defects = [
+        {"id_defect": 1, "description": "Люфт крепления экрана", "type": "hardware", "severity": "Критический", "found_date": "2026-10-20", "fixed_date": "2026-10-21", "status": "Устранён", "id_employee": 2, "id_operation": 1},
+        {"id_defect": 2, "description": "Зависание цикла автозапуска", "type": "software", "severity": "Значительный", "found_date": "2026-10-20", "fixed_date": "2026-10-21", "status": "Устранён", "id_employee": 2, "id_operation": 1},
+        {"id_defect": 3, "description": "Повреждение изоляции шлейфа", "type": "hardware", "severity": "Незначительный", "found_date": "2026-10-21", "fixed_date": "2026-10-21", "status": "Устранён", "id_employee": 2, "id_operation": 1},
+        {"id_defect": 4, "description": "Ошибка отрисовки шрифта в меню", "type": "software", "severity": "Незначительный", "found_date": "2026-10-21", "fixed_date": None, "status": "Открыт", "id_employee": 2, "id_operation": 1},
     ]
     total_inspections = 10
-    return stock_data, orders_data, defects_data, total_inspections
+    return customers, components, orders, order_components, defects, total_inspections
 
 
 def main():
-    stock, orders, defects, total_inspections = get_mock_data()
-    deficits, batch_cost, _ = check_materials_deficit(orders, stock)
+    customers, components, orders, order_components, defects, total_inspections = get_mock_data()
+    new_order = register_production_order(
+        orders,
+        customers,
+        id_customer=2,
+        description="Двусторонний выставочный стенд с интерактивной витриной",
+        created_date="2026-10-12",
+        planned_days=16,
+    )
+    print("Новый заказ:", new_order)
+    deficits, batch_cost = check_materials_deficit(orders, order_components, components)
     print("Себестоимость:", batch_cost)
     print("Дефицит:", deficits)
     qc_stats = analyze_defect_statistics(defects, total_inspections)
