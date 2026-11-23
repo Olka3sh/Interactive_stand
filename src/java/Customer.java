@@ -19,6 +19,12 @@ public class Customer {
     }
 
     public Order registerProductionOrder(List<Order> orders, String description, LocalDate createdDate, int plannedDays) {
+        if (orders == null) {
+            throw new IllegalArgumentException("Список заказов orders не может быть null");
+        }
+        if (plannedDays <= 0) {
+            throw new IllegalArgumentException("Плановый срок выполнения plannedDays должен быть больше 0");
+        }
         int nextId = orders.stream().mapToInt(Order::getIdOrder).max().orElse(0) + 1;
         LocalDate start = (createdDate != null) ? createdDate : LocalDate.now();
         LocalDate finish = start.plusDays(plannedDays);
