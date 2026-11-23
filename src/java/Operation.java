@@ -4,6 +4,7 @@ import java.util.Collections;
 import java.util.LinkedHashMap;
 import java.util.List;
 import java.util.Map;
+import java.util.Objects;
 
 public class Operation {
     private final int idOperation;
@@ -30,6 +31,7 @@ public class Operation {
     }
 
     public void addDefect(Defect defect) {
+        Objects.requireNonNull(defect, "Дефект не может быть null");
         defects.add(defect);
     }
 
